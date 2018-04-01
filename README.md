@@ -1,4 +1,6 @@
 # data-engineering-tutorial
+[![License](https://img.shields.io/badge/license-GPL-green.svg?style=flat)](https://github.com/junipertcy/networkie/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/junipertcy/networkie.svg?branch=master)](https://travis-ci.org/junipertcy/networkie)
 Introduction to data engineering workflows for undergraduates.
 
 The modules are organized as follows
