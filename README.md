@@ -1,17 +1,18 @@
-# data-engineering-tutorial
+# networkie (engineering workflows on network data)
 [![License](https://img.shields.io/badge/license-GPL-green.svg?style=flat)](https://github.com/junipertcy/networkie/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/junipertcy/networkie.svg?branch=master)](https://travis-ci.org/junipertcy/networkie)
-Introduction to data engineering workflows for undergraduates.
+
+Introduction to engineering workflows on network data for undergraduates.
 
 The modules are organized as follows
 
 *  **gen:**  Synthetic network data generation via various models.
-   Current implementation includes `Erdős–Rényi model` and `Gaussian mixture model`.
+   Current implementation includes `Erdős–Rényi model` and `Gaussian mixture model` (to be implemented).
 *  **partition:** Graph partitioning via various methods.
 *  **transform:** Network data transformation between various formats.
    Current implementation includes transformation between the plain text `edgelist` file and the Numpy.ndarray `matrix` format.
 *  **viz:** Network visualization module.
-*  **data:** Network dataset for the project.  
+*  **dataset:** Network dataset for the project.
 
 
 ## Getting started
@@ -50,7 +51,7 @@ However, due to time constraint, we will not focus on this topic.
 
 1. [Overview](tutorials/01_overview.ipynb) - introduction to basic tools, e.g. git, GitHub, Python.
 
-2. [Foundations](tutorials/02_foundations.ipynb) - TBD.
+2. [Foundations](tutorials/02_foundations.ipynb) - Using `networkx` to represent network data;
  
 3. [Visualization](tutorials/03_visualization.ipynb) - TBD.
 

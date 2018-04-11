@@ -1,3 +1,7 @@
+# Sensitive data (named network data)
+dataset/in-class_network.csv
+
+# PyCharm metadata
 .idea/*
 
 # Byte-compiled / optimized / DLL files
