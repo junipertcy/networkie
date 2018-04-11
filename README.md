@@ -1,6 +1,4 @@
-# networkie (engineering workflows on network data)
-[![License](https://img.shields.io/badge/license-GPL-green.svg?style=flat)](https://github.com/junipertcy/networkie/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/junipertcy/networkie.svg?branch=master)](https://travis-ci.org/junipertcy/networkie)
+# networkie (engineering workflows on network data) [![License](https://img.shields.io/badge/license-GPL-green.svg?style=flat)](https://github.com/junipertcy/networkie/blob/master/LICENSE) [![Build Status](https://travis-ci.org/junipertcy/networkie.svg?branch=master)](https://travis-ci.org/junipertcy/networkie)
 
 Introduction to engineering workflows on network data for undergraduates.
 
@@ -33,6 +31,7 @@ To download Anaconda Distribution, visit [here](https://www.anaconda.com/downloa
 
 If you have pulled the codes, it should now be ready to work!
 To test its functionalities, let's first prepare some synthetic data.
+
 From the repo directory, run:
 ```commandline
 python scripts/prep.py
