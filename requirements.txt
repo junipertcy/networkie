@@ -6,5 +6,8 @@
 # Used when dealing with the affinity matrices.
 numpy
 
+# Used when dealing with networks
+python-igraph
+
 # Tutorial notebooks
 jupyter

@@ -1,8 +1,8 @@
-# networkie (engineering workflows on network data) [![License](https://img.shields.io/badge/license-GPL-green.svg?style=flat)](https://github.com/junipertcy/networkie/blob/master/LICENSE) [![Build Status](https://travis-ci.org/junipertcy/networkie.svg?branch=master)](https://travis-ci.org/junipertcy/networkie)
+# networkie [![License](https://img.shields.io/badge/license-GPL-green.svg?style=flat)](https://github.com/junipertcy/networkie/blob/master/LICENSE) [![Build Status](https://travis-ci.org/junipertcy/networkie.svg?branch=master)](https://travis-ci.org/junipertcy/networkie)
 
-Introduction to engineering workflows on network data for undergraduates.
+Introduction to the engineering workflow on network data for undergraduates.
 
-The modules are organized as follows
+The `networkie` modules are organized as follows:
 
 *  **gen:**  Synthetic network data generation via various models.
    Current implementation includes `Erdős–Rényi model` and `Gaussian mixture model` (to be implemented).
@@ -12,6 +12,26 @@ The modules are organized as follows
 *  **viz:** Network visualization module.
 *  **dataset:** Network dataset for the project.
 
+More broadly, the repository is organized as follows:
+
+*  **build_tools** Continuous integration related scripts.
+*  **dataset** Network dataset.
+*  **homework** Homework designed for learning network analysis with the library.
+*  **networkie** Main library of the `networkie`.
+*  **scripts** Other scripts.
+*  **tests** Scripts for unit tests via `pytest`.
+*  **tutorials** Jupyter Notebooks that are useful for learning the library (and network analysis).
+
+The main function for the files in the root directory is as follows:
+
+*  **.gitattributes** Attributes for the Git repo. Here, we ask Git to ignore counting `*.ipynb` files as part of the code contribution in the repo.
+*  **.gitignore** Listing of the files (and file extensions) that you would like Git to ignore.
+*  **.travis.yml** Configuration files for [travis-ci](http://travis-ci.org/).
+*  **LICENSE** License for the project. Here, we use [GNU GPLv3](http://choosealicense.online/licenses/gpl-3.0/) because we cared about sharing improvements.
+*  **pytest.ini** Configuration file for the `pytest` framework.
+*  **README.md** The readme file for the project.
+*  **requirements.txt** The libraries that you have to install before running the code of the project smoothly.
+*  **requirements_test.txt** The libraries that you have to install before running the code of the project smoothly; when running in a test mode.
 
 ## Getting started
 First things first, please [fork this repository](https://help.github.com/articles/fork-a-repo/) on your GitHub.
@@ -24,27 +44,24 @@ Now, let's install the libraries needed by the project.
 We will do so by installing the libraries into existing environment.
 However, a better practice is to [create a new environment for the project](http://docs.python-guide.org/en/latest/dev/virtualenvs/). 
 ```commandline
-conda install ******
+conda install numpy jupyter python-igraph
 ```
 Oh, did I mention that Anaconda (which ships with `conda`) is an useful package management tool for Python?
 To download Anaconda Distribution, visit [here](https://www.anaconda.com/download/).
 
 If you have pulled the codes, it should now be ready to work!
-To test its functionalities, let's first prepare some synthetic data.
+To test whether the code runs well, let's first install the library for unit testing:
 
-From the repo directory, run:
 ```commandline
-python scripts/prep.py
+conda install pytest
 ```
 
-And then, run:
+Then, run:
 ```commandline
-python scripts/test.py
+pytest
 ```
 
-Note that building unit test pipelines (_citation needed_) along with main analytic codes is an important part of software developement.
-However, due to time constraint, we will not focus on this topic. 
-
+If `pytest` shows a green pass sign, you should be ready!
 
 ## Outline
 
