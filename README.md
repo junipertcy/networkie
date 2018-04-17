@@ -4,13 +4,13 @@ Introduction to the engineering workflow on network data for undergraduates.
 
 The `networkie` modules are organized as follows:
 
-*  **gen:**  Synthetic network data generation via various models.
-   Current implementation includes `Erdős–Rényi model` and `Gaussian mixture model` (to be implemented).
-*  **partition:** Graph partitioning via various methods.
-*  **transform:** Network data transformation between various formats.
+*  **gen:**  Network object generation via various generative models, including loading from custom data.
+   Current implementation includes `Custom`. There are virtual classes for `Erdős–Rényi model` and `Gaussian mixture model` (will be implemented in the future).
+*  **partition:** Graph partitioning via various methods. Current implementation includes `Louvain`.
+*  **transform:** Network data transformation between various formats. Current implementation includes the `Edgelist` class. It is designed to transform `*.edgelist` txt data to other formats.
    Current implementation includes transformation between the plain text `edgelist` file and the Numpy.ndarray `matrix` format.
 *  **viz:** Network visualization module.
-*  **dataset:** Network dataset for the project.
+*  **dataset:** Network data sets for the project.
 
 More broadly, the repository is organized as follows:
 

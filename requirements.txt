@@ -7,7 +7,7 @@
 numpy
 
 # Used when dealing with networks
-python-igraph
+networkx
 
 # Tutorial notebooks
 jupyter
