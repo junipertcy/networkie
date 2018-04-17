@@ -20,7 +20,6 @@ More broadly, the repository is organized as follows:
 *  **networkie** Main library of the `networkie`.
 *  **scripts** Other scripts.
 *  **tests** Scripts for unit tests via `pytest`.
-*  **tutorials** Jupyter Notebooks that are useful for learning the library (and network analysis).
 
 The main function for the files in the root directory is as follows:
 
@@ -32,6 +31,8 @@ The main function for the files in the root directory is as follows:
 *  **README.md** The readme file for the project.
 *  **requirements.txt** The libraries that you have to install before running the code of the project smoothly.
 *  **requirements_test.txt** The libraries that you have to install before running the code of the project smoothly; when running in a test mode.
+*  **\*.ipynb** Jupyter Notebooks that are useful for learning.
+
 
 ## Getting started
 First things first, please [fork this repository](https://help.github.com/articles/fork-a-repo/) on your GitHub.

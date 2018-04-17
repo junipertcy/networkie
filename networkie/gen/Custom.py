@@ -36,8 +36,8 @@ class LoadFromFile(object):
         print('Edgelist txt data successfully loaded into a networkx Graph!')
         return self.g
 
-    def from_in_class_network(self):
+    def from_in_class_network(self):  # This is Prob. 3-a.
         '''
-        Write your code documentation here.
+        Write your code documentation here.  # This is Prob. 4-a.
         '''
         return self.g
