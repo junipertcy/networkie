@@ -45,19 +45,18 @@ Now, let's install the libraries needed by the project.
 We will do so by installing the libraries into existing environment.
 However, a better practice is to [create a new environment for the project](http://docs.python-guide.org/en/latest/dev/virtualenvs/). 
 ```commandline
-conda install numpy jupyter python-igraph
+conda install numpy jupyter networkx pytest
+```
+Or, you may simply do:
+```commandline
+pip install -r requirements.txt
+pip install -r requirements_test.txt
 ```
 Oh, did I mention that Anaconda (which ships with `conda`) is an useful package management tool for Python?
 To download Anaconda Distribution, visit [here](https://www.anaconda.com/download/).
 
 If you have pulled the codes, it should now be ready to work!
-To test whether the code runs well, let's first install the library for unit testing:
-
-```commandline
-conda install pytest
-```
-
-Then, run:
+To make sure the code works well, run the unit tests:
 ```commandline
 pytest
 ```
