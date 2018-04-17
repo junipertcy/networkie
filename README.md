@@ -15,7 +15,7 @@ The `networkie` modules are organized as follows:
 More broadly, the repository is organized as follows:
 
 *  **build_tools** Continuous integration related scripts.
-*  **dataset** Network dataset.
+*  **dataset** Network data sets.
 *  **homework** Homework designed for learning network analysis with the library.
 *  **networkie** Main library of the `networkie`.
 *  **scripts** Other scripts.
@@ -26,7 +26,7 @@ The main function for the files in the root directory is as follows:
 
 *  **.gitattributes** Attributes for the Git repo. Here, we ask Git to ignore counting `*.ipynb` files as part of the code contribution in the repo.
 *  **.gitignore** Listing of the files (and file extensions) that you would like Git to ignore.
-*  **.travis.yml** Configuration files for [travis-ci](http://travis-ci.org/).
+*  **.travis.yml** Configuration file for [travis-ci](http://travis-ci.org/).
 *  **LICENSE** License for the project. Here, we use [GNU GPLv3](http://choosealicense.online/licenses/gpl-3.0/) because we cared about sharing improvements.
 *  **pytest.ini** Configuration file for the `pytest` framework.
 *  **README.md** The readme file for the project.
