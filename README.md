@@ -2,7 +2,7 @@
 
 Introduction to the engineering workflow on network data for undergraduates.
 
-The `networkie` modules are organized as follows:
+The `networkie` libray is organized with the following modules:
 
 *  **gen:**  Network object generation via various generative models, including loading from custom data.
    Current implementation includes `Custom`. There are virtual classes for `Erdős–Rényi model` and `Gaussian mixture model` (will be implemented in the future).
@@ -70,9 +70,9 @@ For more info, please check out the references.
 
 1. [Overview](tutorials/01_overview.ipynb) - introduction to basic tools, e.g. git, GitHub, Python.
 
-2. [Foundations](tutorials/02_foundations.ipynb) - Reading files, importing data, creating the Graph.
+2. [Foundations](tutorials/02_foundations.ipynb) - Reading files, importing data, creating the Graph, adding attributes to the graph.
  
-3. [Analysis](tutorials/03_analysis.ipynb) - adding attributes to the graph, centrality measures, community detection with modularity.
+3. [Analysis](tutorials/03_analysis.ipynb) - centrality measures, community detection with modularity (TODO).
 
 4. [Visualization](tutorials/04_visualization.ipynb) - network visualization.
 
