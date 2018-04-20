@@ -3,9 +3,9 @@ import networkx as nx
 
 class LoadFromFile(object):
     def __init__(self):
-        '''
+        """
         Initiate variables for the class.
-        '''
+        """
         self.g = nx.Graph()
 
         pass

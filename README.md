@@ -18,7 +18,7 @@ More broadly, the repository is organized as follows:
 *  **dataset** Network data sets.
 *  **homework** Homework designed for learning network analysis with the library.
 *  **networkie** Main library of the `networkie`.
-*  **scripts** Other scripts.
+*  **scripts** Other scripts, including the script that parses Google Forms' raw csv file.
 *  **tests** Scripts for unit tests via `pytest`.
 
 The main function for the files in the root directory is as follows:
