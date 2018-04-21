@@ -68,13 +68,13 @@ If `pytest` shows a green pass sign, you should be ready!
 We use these `*.ipynb` files to illustrate the use of `networkx` in analyzing the in-class social network data.
 For more info, please check out the references.
 
-1. [Overview](tutorials/01_overview.ipynb) - introduction to basic tools, e.g. git, GitHub, Python.
+1. [Overview](01_overview.ipynb) - introduction to basic tools, e.g. git, GitHub, Python.
 
-2. [Foundations](tutorials/02_foundations.ipynb) - Reading files, importing data, creating the Graph, adding attributes to the graph.
+2. [Foundations](02_foundations.ipynb) - Reading files, importing data, creating the Graph, adding attributes to the graph.
  
-3. [Analysis](tutorials/03_analysis.ipynb) - centrality measures, community detection with modularity (TODO).
+3. [Analysis](03_analysis.ipynb) - centrality measures, community detection with modularity (TODO).
 
-4. [Visualization](tutorials/04_visualization.ipynb) - network visualization.
+4. [Visualization](04_visualization.ipynb) - network visualization.
 
 
 ## Reference
