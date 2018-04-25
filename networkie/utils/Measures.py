@@ -66,7 +66,6 @@ class Node(object):
             The list of degree of the NetworkX graph with indexes corresponding to the name of node.
 
         '''  
-        import pandas as pd
         import networkx as nx
         import numpy as np
         vertex_degree = []
