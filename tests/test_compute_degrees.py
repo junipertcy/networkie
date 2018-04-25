@@ -2,7 +2,7 @@
     Test if the test_degree_dist function really works well.
 '''
 import sys
-sys.path.append(“./networkie/")
+sys.path.append("./networkie/")
 
 class TestComputeDegrees:
     def test_degree_dist(self):
