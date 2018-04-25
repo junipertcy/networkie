@@ -15,7 +15,7 @@ class TestComputeDegrees:
         g.add_edges_from(data_list)
         n = nx.number_of_nodes(g)
         e = nx.number_of_edges(g)
-        degrees = float(2*e/n)
+        degrees = (float(2.0) * e/n)
         degree_list = Measures.Node()
         g_degree = degree_list.degree_dist(g)
         g_degree = np.array(g_degree)
