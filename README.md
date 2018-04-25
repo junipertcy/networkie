@@ -1,4 +1,4 @@
-# networkie [![License](https://img.shields.io/badge/license-GPL-green.svg?style=flat)](https://github.com/junipertcy/networkie/blob/master/LICENSE) [![Build Status](https://travis-ci.org/junipertcy/networkie.svg?branch=master)](https://travis-ci.org/junipertcy/networkie)[![Build Status](https://travis-ci.org/Kaminyou/networkie.svg?branch=master)](https://travis-ci.org/Kaminyou/networkie)
+# networkie [![License](https://img.shields.io/badge/license-GPL-green.svg?style=flat)](https://github.com/junipertcy/networkie/blob/master/LICENSE) [![Build Status](https://travis-ci.org/junipertcy/networkie.svg?branch=master)](https://travis-ci.org/junipertcy/networkie) [![Build Status](https://travis-ci.org/Kaminyou/networkie.svg?branch=master)](https://travis-ci.org/Kaminyou/networkie)
 
 
 Introduction to the engineering workflow on network data for undergraduates.
