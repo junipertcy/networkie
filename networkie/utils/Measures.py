@@ -14,7 +14,6 @@ def compute_num_triangles(g):  # This is Prob. 3-e.
         The total number of triangles(transitive triad) of the NetworkX graph.
 
     '''
-    import pandas as pd
     import networkx as nx
     import numpy as np
     k = g.copy()
