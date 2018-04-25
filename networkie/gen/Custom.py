@@ -51,7 +51,6 @@ class LoadFromFile(object):
             The parsed graph.
 
         '''
-        import pandas as pd
         import numpy as np
         In_class_network = []
         In_class_network_for_use = []

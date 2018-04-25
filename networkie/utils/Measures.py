@@ -76,4 +76,3 @@ class Node(object):
         vertex_degree_sort = vertex_degree[vertex_degree[:, 0].argsort()]
         final_list = list(vertex_degree_sort[:,1])
         return final_list
-
