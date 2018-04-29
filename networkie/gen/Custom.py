@@ -38,6 +38,10 @@ class LoadFromFile(object):
         return self.g
 
     def from_in_class_network(self):  # This is Prob. 3-a.
+        '''
+        Write your code documentation here.  # This is Prob. 4-a.
+        '''
+    
         #f = open('In-class_network.txt','r')
         data = pd.read_csv('In-class_network.txt', sep="\t")
         #print(data)
