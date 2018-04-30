@@ -1,7 +1,7 @@
 import sys
 sys.path.append('./networkie/')
 import networkx as nx
-from networkie.utils import Measures
+from utils import Measures
 
 
 def test_compute_degrees():
