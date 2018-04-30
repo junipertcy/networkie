@@ -28,7 +28,5 @@ before_install:
   - source build_tools/travis/install.sh
   - if [[ "$WITH_PYTHON" == "3.6" ]]; then source activate testenv3; elif [[ "$WITH_PYTHON" == "2.7" ]]; then source activate testenv2; fi
 install: bash scripts/install_requirements.sh
-script: 
-script:
- - bash build_tools/travis/test_script.sh
- - "nosetests --with-coverage --cover-package app"
+script: bash build_tools/travis/test_script.sh
+
