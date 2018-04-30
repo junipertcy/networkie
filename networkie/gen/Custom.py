@@ -1,14 +1,12 @@
 import networkx as nx
-
+import pandas as pd
 
 class LoadFromFile(object):
     def __init__(self):
         '''
-        Initiate variables for the class.
+        Initiate object a graph variable name 'g'
         '''
         self.g = nx.Graph()
-
-        pass
 
     def from_edgelist(self, path):
         '''
@@ -23,7 +21,6 @@ class LoadFromFile(object):
         -------
         G: `NetworkX graph`
             The parsed graph.
-
         '''
 
         edgelist = []
@@ -36,8 +33,34 @@ class LoadFromFile(object):
         print('Edgelist txt data successfully loaded into a networkx Graph!')
         return self.g
 
-    def from_in_class_network(self):  # This is Prob. 3-a.
+    def from_in_class_network(self, filename='dataset/In-class_network.txt',
+                              fillna='unknown', directed=False):
         '''
-        Write your code documentation here.  # This is Prob. 4-a.
+        read graph from csv file
+
+        Parameters
+        ----------
+        filename : `str`, default 'In-class_network.txt', pathlib.Path
+        fillna : `object`, default 'unknown', fill missing values of attributes
+        directed : `bool`, default False, determine whether it's Graph or DiGraph
+
+        Returns
+        -------
+        G: `networkx.DiGraph` object if directed is True
+           else return `networkx.Graph`.
         '''
+        Graph = nx.DiGraph if directed else nx.Graph
+        # csv to Dataframe
+        df = pd.read_csv(filename,
+                         delimiter='\t' ,
+                         index_col=0).iloc[:,:-1].fillna(fillna)
+        # rename neighbors column
+        df.rename(columns={ df.columns[0]:'neighbors'}, inplace=True)
+        # turn neighbors to adjacency list
+        adjacency = df.neighbors.apply(lambda x: eval('[%s]'%x)).to_dict()
+        # create graph from adjacency list 
+        self.g = Graph(adjacency)
+        # other columns are attributes of nodes
+        nx.set_node_attributes(self.g, df.drop('neighbors',1).T.to_dict() )
+
         return self.g
