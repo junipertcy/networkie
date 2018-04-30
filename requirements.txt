@@ -3,6 +3,9 @@
 
 #### ESSENTIAL LIBRARIES FOR MAIN FUNCTIONALITY ####
 
+#Used when dealing with txt/csv
+pandas
+
 # Used when dealing with the affinity matrices.
 numpy
 
