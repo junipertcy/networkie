@@ -1,5 +1,5 @@
 import sys
-sys.path.append('./networkie')
+sys.path.append('./networkie/')
 import networkx as nx
 from networkie.utils import Measures
 
