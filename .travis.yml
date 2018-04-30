@@ -21,11 +21,7 @@ cache:
   - /home/travis/miniconda3
   - /home/travis/.cache/pip
 notifications:
-  email:
-    recipients:
-      - mason840929@gmail.com
-    on_success: always
-    on_failure: always
+  email: false
 before_install:
   - source build_tools/travis/install.sh
   - if [[ "$WITH_PYTHON" == "3.6" ]]; then source activate testenv3; elif [[ "$WITH_PYTHON" == "2.7" ]]; then source activate testenv2; fi
