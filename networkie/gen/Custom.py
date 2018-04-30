@@ -38,7 +38,16 @@ class LoadFromFile(object):
 
     def from_in_class_network(self,data):  # This is Prob. 3-a.
         '''
-        Write your code documentation here.  # This is Prob. 4-a.
+        Read the in-class data from txt file .
+
+        Parameters
+        ----------
+        data: `str`
+            The path and txt file name of th inclass data 
+
+        Returns
+        -------
+        G: `NetworkX graph`
         '''
         df = pd.read_table(data)
         G = nx.Graph()

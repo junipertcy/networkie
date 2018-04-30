@@ -1,6 +1,15 @@
 def compute_num_triangles(G):  # This is Prob. 3-e.
     '''
-    Write your code documentation here.  # This is Prob. 4-a.
+    Calculates the total number of triangles in the network
+
+    Parameters
+    ----------
+    G: `NetworkX graph`
+
+    Returns
+    -------
+    num_of_triangle: `int`
+    	number of triangle in a network
     '''
     def nodes_connected(u, v):
     	return u in G.neighbors(v)
@@ -10,7 +19,8 @@ def compute_num_triangles(G):  # This is Prob. 3-e.
     	pairs = [(i,v) for i in neighbors for v in neighbors if i!=v]
     	for u,s in pairs:
     		if nodes_connected(u,s):t+=1
-    return t/6
+    num_of_triangle = t/6
+    return num_of_triangle
 
 
 class Node(object):
@@ -20,9 +30,19 @@ class Node(object):
     def betweenness(self):
         pass
 
-    def degree_dist(self):  # This is Prob. 3-d.
+    def degree_dist(self,G):  # This is Prob. 3-d.
         '''
-        Write your code documentation here.  # This is Prob. 4-a.
+        Caculate the degree distibution of each node in a Graph
+
+        Parameters
+        ----------
+        G: `NetworkX graph`
+
+        Returns
+        -------
+        vector_k: `list`
+        	elements are the degrees ki of vertex i
         '''
-        return list()
+        vector_k = list(dict(G.degree).values())
+        return vector_k
 
