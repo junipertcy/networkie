@@ -23,6 +23,8 @@ cache:
 notifications:
   email: false
 before_install:
+  - "pip install -U pip"
+  - "export PYTHONPATH=$PYTHONPATH:$(pwd)"
   - source build_tools/travis/install.sh
   - if [[ "$WITH_PYTHON" == "3.6" ]]; then source activate testenv3; elif [[ "$WITH_PYTHON" == "2.7" ]]; then source activate testenv2; fi
 install: bash scripts/install_requirements.sh
