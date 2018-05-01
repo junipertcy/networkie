@@ -1,6 +1,3 @@
-import matplotlib.pyplot as plt
-import networkx as nx
-import pandas as pd
 
 class LoadFromFile(object):
     def __init__(self):
@@ -41,7 +38,9 @@ class LoadFromFile(object):
         '''
         Write your code documentation here.  # This is Prob. 4-a.
         '''
-    
+        import matplotlib.pyplot as plt
+        import networkx as nx
+        import pandas as pd
         #f = open('In-class_network.txt','r')
         data = pd.read_csv('In-class_network.txt', sep="\t")
         #print(data)
@@ -56,6 +55,7 @@ class LoadFromFile(object):
                 #print(data.iloc[i][0])
         #print(edgelist)
         self.g.add_edges_from(edgelist)
+        
         print(nx.info(self.g))
         #print("Average path lenght: "+ nx.average_shortest_path_length(self.g))
         print("Average path length of subgraph: ")
