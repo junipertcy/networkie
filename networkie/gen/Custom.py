@@ -1,6 +1,15 @@
 import networkx as nx
+import pandas as pd
+import matplotlib.pyplot as plt
 
-
+def changetoint(x):
+    list1=[]
+    for item in x:
+        try:
+            list1=list1+[int(item)]
+        except:
+            pass
+    return list1
 class LoadFromFile(object):
     def __init__(self):
         """
@@ -36,8 +45,22 @@ class LoadFromFile(object):
         print('Edgelist txt data successfully loaded into a networkx Graph!')
         return self.g
 
-    def from_in_class_network(self):  # This is Prob. 3-a.
+    def from_in_class_network(self,filename):  # This is Prob. 3-a.
         '''
-        Write your code documentation here.  # This is Prob. 4-a.
+        Read graph in edgelist txt format from `path`.
+
+        Parameters
+        ----------
+        filename: `str`
+            your target filename
+        Returns
+        -------
+        G: `NetworkX graph`
+           
         '''
+        
+        df=pd.read_csv(filename,sep="\t",index_col=0)
+        self.g=nx.Graph(df["IDs-of-acquaintances"].str.split(",").apply(changetoint).to_dict())
+        char=df.loc[:,["sex","age","department","time-to-bed"]].T.to_dict()
+        nx.set_node_attributes(self.g,char)
         return self.g
