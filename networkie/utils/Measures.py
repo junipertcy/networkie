@@ -1,6 +1,17 @@
 def compute_num_triangles(g):  # This is Prob. 3-e.
     '''
-    Write your code documentation here.  # This is Prob. 4-a.
+    Read a networkx graph to count the total of triangles in it.
+    
+    Parameters
+    ----------
+    g: `NetworkX graph`
+       The graph created from networkx. 
+    
+    Returns
+    -------
+    n/3: `int`
+        The total triangles(transitive triad) of the NetworkX graph.
+    
     '''
     import networkx as nx
     import itertools
@@ -25,7 +36,18 @@ class Node(object):
 
     def degree_dist(self,g):  # This is Prob. 3-d.
         '''
-        Write your code documentation here.  # This is Prob. 4-a.
+        Read a networkx graph to count the degrees of every node in it.
+        
+        Parameters
+        ----------
+        g: `NetworkX graph`
+            The graph created from networkx. 
+
+        Returns
+        -------
+        degree_list: `Python list`
+            The list is the degree of the nodes in NetworkX graph.
+        
         '''
         
         import networkx as nx

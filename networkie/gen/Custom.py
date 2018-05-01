@@ -36,7 +36,17 @@ class LoadFromFile(object):
 
     def from_in_class_network(self):  # This is Prob. 3-a.
         '''
-        Write your code documentation here.  # This is Prob. 4-a.
+        Convert the data in "In-class_network.txt" to the graph
+        And print it info.
+        
+        Parameters
+        ----------
+         
+        Returns
+        -------
+        g: `NetworkX graph`
+            The graph of the "In-class_network.txt"
+
         '''
         import matplotlib.pyplot as plt
         import networkx as nx
