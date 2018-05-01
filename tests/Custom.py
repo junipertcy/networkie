@@ -62,39 +62,3 @@ class LoadFromFile(object):
 
         self.g.add_edges_from(edgelist)
         return self.g
-
-# This is Prob. 3-b.
-g = LoadFromFile()
-G = g.from_in_class_network('In-class_network.txt')
-
-b = nx.info(G).split('\n')
-print('3-b', b[2], b[3], b[4], sep = '\n') # This is Prob. 3-b-(i, ii, iii).
-
-print('average path length:', len(list(G.edges()))/len(list(G.nodes()))) # This is Prob. 3-b-(iv).
-
-graphs = max(nx.connected_component_subgraphs(G), key=len)
-print('The size of the largest connected component:',graphs.size()) # This is Prob. 3-b-(v).
-
-
-# This is Prob. 3-c.
-num_node = len(list(G.nodes()))
-max_edge = num_node * (num_node - 1) / 2
-print('\n3-c\ne/e_max:', len(list(G.edges())) / max_edge)
-
-
-# This is Prob. 3-e.
-edgelist = {}
-node = list(G.nodes())
-for i in node:
-    if len(G.edges(i)) != 0:
-        cur = []
-        for j in list(G.edges(i)):
-            cur.append(j[1])
-        edgelist[i] = cur
-tri = []
-for i in list(edgelist.keys()):
-    for j in edgelist[i]:
-        for k in edgelist[j]:
-            if i in edgelist[k] and sorted([i, j, k]) not in tri:
-                tri.append(sorted([i, j, k]))      
-print('\n3-e\nthe total number of triangles in the network:', len(tri))
