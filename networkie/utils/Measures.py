@@ -23,7 +23,7 @@ class Node(object):
     def betweenness(self):
         pass
 
-    def degree_dist(self):  # This is Prob. 3-d.
+    def degree_dist(self,g):  # This is Prob. 3-d.
 
         '''
         Write your code documentation here.  # This is Prob. 4-a.
