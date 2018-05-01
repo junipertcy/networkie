@@ -36,6 +36,7 @@ class Node(object):
         Returns
         -------
         g: `NetworkX graph`
+        
         '''
         l=[]
         for i in range(len(g.nodes())):
