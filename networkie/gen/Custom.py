@@ -10,6 +10,7 @@ class LoadFromFile(object):
 
         pass
 
+
     def from_edgelist(self, path):
         '''
         Read graph in edgelist txt format from `path`.
@@ -36,8 +37,31 @@ class LoadFromFile(object):
         print('Edgelist txt data successfully loaded into a networkx Graph!')
         return self.g
 
-    def from_in_class_network(self):  # This is Prob. 3-a.
-        '''
-        Write your code documentation here.  # This is Prob. 4-a.
-        '''
-        return self.g
+
+    def from_in_class_network(self,path):  # This is Prob. 3-a.
+        import pandas as pd   
+        import numpy as np
+
+        df = pd.read_table(path)
+        IDstore =[]
+        ID =[]
+        data = np.array(list(zip(df['ID'], df['IDs-of-acquaintances']))) 
+
+        for line in data:
+            if line[1]==" " :          
+                self.g.add_node(line[0])                    #若第二欄為0，則只將其編號放入g
+            else:
+                tempstore = line[1].split(',')              #其他，則將每一筆資料以區隔並存入
+                for templine in tempstore:
+                    self.g.add_edge(line[0],templine)
+            tempstore.clear()
+
+        print(nx.info(self.g))
+        #print(self.g.nodes())
+        print('Edgelist txt data successfully loaded into a networkx Graph!')    
+        return self.g 
+
+
+
+        
+        
