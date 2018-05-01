@@ -69,6 +69,7 @@ class LoadFromFile(object):
         #nx.draw(self.g, node_color = '#00BBFF', node_size = 400, with_labels = True)
         #plt.show()
         return self.g
-
+'''
 a = LoadFromFile()
 a.from_in_class_network()
+'''

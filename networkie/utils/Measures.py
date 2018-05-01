@@ -1,11 +1,9 @@
-import pandas as pd
-import networkx as nx
-import itertools
-
 def compute_num_triangles(g):  # This is Prob. 3-e.
     '''
     Write your code documentation here.  # This is Prob. 4-a.
     '''
+    import networkx as nx
+    import itertools
     n = 0
     for e in e_iter(g):
         if g.has_edge(e[1][0], e[1][1]) or g.has_edge(e[1][1], e[1][0]):
@@ -35,7 +33,7 @@ class Node(object):
         degree_list = []
         for i in g:
             degree_list.append(g.degree(i))
-        print(degree_list)
+        #print(degree_list)
         return degree_list
         '''
         data = pd.read_csv('In-class_network.txt', sep="\t")
@@ -56,12 +54,11 @@ class Node(object):
         return edgelist
         '''
         
-
+'''
 g=nx.complete_graph(3)
-
 a = Node()
-a.degree_dist(g)
+print(a.degree_dist(g))
 
 print('Number of triangles:', compute_num_triangles(g))
 
-
+'''
