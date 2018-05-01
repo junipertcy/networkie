@@ -1,3 +1,4 @@
+import networkx as nx
 
 class LoadFromFile(object):
     def __init__(self):
@@ -49,7 +50,6 @@ class LoadFromFile(object):
 
         '''
         import matplotlib.pyplot as plt
-        import networkx as nx
         import pandas as pd
         #f = open('In-class_network.txt','r')
         data = pd.read_csv('In-class_network.txt', sep="\t")
