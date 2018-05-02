@@ -37,7 +37,6 @@ class LoadFromFile(object):
         return self.g
 
     def from_in_class_network(self,s):  # This is Prob. 3-a.
-    
         '''
         Write your code documentation here.  # This is Prob. 4-a.
         Parameters
