@@ -1,12 +1,8 @@
-import networkx as nx
-import pandas as pd
-
-
 class LoadFromFile(object):
     def __init__(self):
-        """
+        '''
         Initiate variables for the class.
-        """
+        '''
         self.g = nx.Graph()
 
         pass
@@ -38,7 +34,6 @@ class LoadFromFile(object):
         return self.g
 
     def from_in_class_network(self, path):  # This is Prob. 3-a.
-
         df = pd.read_csv(path, delimiter = "\t",index_col = 0 )
         edges = []
         self.g = nx.Graph()
@@ -48,6 +43,10 @@ class LoadFromFile(object):
             for i in sum_str:
                 if i:
                     int_num_list.append(int(i))
+            new_list = []
+            for i in id_list:
+                for j in int_num_list:
+                    new_list.append((i,j))
             tmp = [(node, v) for v in int_num_list]
             self.g.add_edges_from(tmp)
 
@@ -55,4 +54,4 @@ class LoadFromFile(object):
         Write your code documentation here.  # This is Prob. 4-a.
         '''
         return self.g
-
+c= 
