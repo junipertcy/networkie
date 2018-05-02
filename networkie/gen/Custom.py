@@ -39,18 +39,18 @@ class LoadFromFile(object):
 
     def from_in_class_network(self,data_r):  # This is Prob. 3-a.
         '''
-            Write  a function to turn the data of  txt file to a  networkx graph.
+        Write  a function to turn the data of  txt file to a  networkx graph.
 
-            Parameters
-            ----------
-            data_r: `str`
-                The file name and path of  'In-class_network.txt'.
+        Parameters
+        ----------
+        data_r: `str`
+            The file name and path of  'In-class_network.txt'.
 
-            Returns
-            -------
-            g : `NetworkX graph`
-                The parsed graph.
-            '''
+        Returns
+        -------
+        g : `NetworkX graph`
+            The parsed graph.
+        '''
         stats = pd.read_table(data_r)
         stats.iloc[:, 1] = stats.iloc[:, 1].str.split(',')
         self.g.add_nodes_from(stats['ID'].values)
