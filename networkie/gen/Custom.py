@@ -1,5 +1,5 @@
 import networkx as nx
-
+import pandas as pd
 
 class LoadFromFile(object):
     def __init__(self):
@@ -36,8 +36,40 @@ class LoadFromFile(object):
         print('Edgelist txt data successfully loaded into a networkx Graph!')
         return self.g
 
-    def from_in_class_network(self):  # This is Prob. 3-a.
+    def from_in_class_network(self,s):  # This is Prob. 3-a.
+    
         '''
         Write your code documentation here.  # This is Prob. 4-a.
+        Parameters
+        ----------
+        s:open file 
+            open and read file
+            Grab two lines information['IDs-of-acquaintances']["ID"]
+            Change data from string to int
+            combine ID and acquaintances
+        Returns
+        -------
+        g: `NetworkX graph`
         '''
+        df=pd.read_csv(s,delimiter = '\t')
+       
+        id_1=df["ID"]
+        a=df['IDs-of-acquaintances']
+
+        for i in range(len(a)):
+            if "," in a[i]:        
+                a[i] = a[i].split(",")
+                for j in range(len(a[i])):
+                    a[i][j]=int(a[i][j])
+                    
+            elif a[i]==" ":
+                continue
+                
+            else:
+                a[i] =[int(a[i])]
+
+            self.g.add_nodes_from(a[i])
+            self.g.add_nodes_from(id_1)
+            for j in range(len(a[i])):
+                self.g.add_edge(int(id_1[i]),a[i][j])
         return self.g
