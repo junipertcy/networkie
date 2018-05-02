@@ -3,9 +3,9 @@ import networkx as nx
 
 class LoadFromFile(object):
     def __init__(self):
-        """
+        '''
         Initiate variables for the class.
-        """
+        '''
         self.g = nx.Graph()
 
         pass
@@ -36,8 +36,25 @@ class LoadFromFile(object):
         print('Edgelist txt data successfully loaded into a networkx Graph!')
         return self.g
 
-    def from_in_class_network(self):  # This is Prob. 3-a.
+    def from_in_class_network(self,data):  # This is Prob. 3-a.
         '''
-        Write your code documentation here.  # This is Prob. 4-a.
+        Read the in-class data from txt file .
+
+        Parameters
+        ----------
+        data: `str`
+            The path and txt file name of th inclass data 
+
+        Returns
+        -------
+        G: `NetworkX graph`
         '''
+        df = pd.read_table(data)
+        G = nx.Graph()
+        for node , friends in df[["ID","IDs-of-acquaintances"]].values:
+        	if " " in friends:
+        		G.add_node(node)
+        		continue
+        	friends - list(map(int,friends.split(",")))
+        	G.add_edges_from(list(zip([node]*len(friends),friends)))
         return self.g
