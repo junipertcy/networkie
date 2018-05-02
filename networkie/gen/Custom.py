@@ -1,5 +1,6 @@
 import networkx as nx
-
+import pandas as pd
+import numpy as np
 
 class LoadFromFile(object):
     def __init__(self):
@@ -36,8 +37,27 @@ class LoadFromFile(object):
         print('Edgelist txt data successfully loaded into a networkx Graph!')
         return self.g
 
-    def from_in_class_network(self):  # This is Prob. 3-a.
+    def from_in_class_network(self,data_r):  # This is Prob. 3-a.
         '''
-        Write your code documentation here.  # This is Prob. 4-a.
+        Write  a function to turn the data of  txt file to a  networkx graph.
+
+        Parameters
+        ----------
+        data_r: `str`
+            The file name and path of  'In-class_network.txt'.
+
+        Returns
+        -------
+        g : `NetworkX graph`
+            The parsed graph.
         '''
+        stats = pd.read_table(data_r)
+        stats.iloc[:, 1] = stats.iloc[:, 1].str.split(',')
+        self.g.add_nodes_from(stats['ID'].values)
+        edge = []
+        for i in range(len(stats)):
+            for j in range(len(stats.iloc[i, 1])):
+                if stats.iloc[i, 1][j] != " ":
+                    edge.append([stats.iloc[i, 0], int(stats.iloc[i, 1][j])])
+        self.g.add_edges_from(edge)
         return self.g
