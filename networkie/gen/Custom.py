@@ -39,5 +39,25 @@ class LoadFromFile(object):
     def from_in_class_network(self):  # This is Prob. 3-a.
         '''
         Write your code documentation here.  # This is Prob. 4-a.
+        
+        Read the data from a file.
+
+        Creat undirected edges by the relationship between Col. ID and Col. IDs-of-acquaintances.
         '''
+        path = "dataset/In-class_network.txt"
+       
+        with open(path,"r") as data:
+            
+            next(data)  # Skip header row
+        
+            for row in data:
+                x= row.split("\t")
+             
+                for i in x[1].split(","):
+            
+                    if i != " ":   # Some ID have no acquaintances
+                        e = [(x[0],i)]
+                        self.g.add_edges_from(e)
+                
+        
         return self.g
